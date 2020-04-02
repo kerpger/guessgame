@@ -1,5 +1,5 @@
 # guessingame.sh project #
-## A script base game ##
+## A script based game ##
 The project includes three files:
 - The **guessinggame.sh** script
 - The **makefile** which creates current *README.md*

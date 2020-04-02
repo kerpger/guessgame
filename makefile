@@ -1,6 +1,6 @@
 README.md:
 	echo "# guessingame.sh project #" > README.md
-	echo "## A script base game ##" >> README.md
+	echo "## A script based game ##" >> README.md
 	echo "The project includes three files:" >> README.md
 	echo "- The **guessinggame.sh** script" >> README.md
 	echo "- The **makefile** which creates current *README.md*" >> README.md
