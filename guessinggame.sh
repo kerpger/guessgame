@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # guessinggame.sh
 nrfiles=$(ls $PWD | wc -l)
 msg=("Incorrect, Guess higher number" "Incorrect, Guess lower number" "Correct, Congratulation!")
