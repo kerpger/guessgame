@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # guessinggame.sh
 
-nrfiles=$(find $"$PWD" -maxdepth 1 -type b,c,f,p,l,s | wc -l )
+nrfiles=$(ls -Al $"$PWD" | grep -v "total" | wc -l )
 
 msg=("Incorrect, Your guess is too low" "Incorrect, Your guess is too high" "Correct, Congratulation!" "Please provide a number")
 answ=""
