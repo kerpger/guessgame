@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 # guessinggame.sh
-nrfiles=$(ls -al $PWD | grep -v "^[d|l|p|s|c|b|D|t]" | wc -l)
+
+nrfiles=$(echo "$PWD" | ls -al | grep -v "^[d|tot]" | wc -l )
 msg=("Incorrect, Your guess is too low" "Incorrect, Your guess is too high" "Correct, Congratulation!" "Please provide a number")
-answ=0
+answ=""
 sol=""
 
 function check {
@@ -14,7 +15,9 @@ else
 fi
 }
 
-while [[ $answ -ne $nrfiles ]]
+start=0
+
+while [[ $answ -ne $nrfiles ]] || [[ $start -eq "0" ]]
 do
 	echo -n "Please guess, how many files are in the current directory ? "
 	while read answ && [[ ! $answ =~ ^[0-9]{1,}$ ]]
@@ -22,5 +25,6 @@ do
 		echo ${msg[3]}
 	done
 	check
+	start=1
 	echo $sol
 done
